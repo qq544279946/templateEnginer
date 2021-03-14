@@ -1,0 +1,15 @@
+{
+  "name": "template_engine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
+  "author": "sjx54427 <544279946@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "4",
+    "webpack-cli": "3",
+    "webpack-dev-server": "3"
+  }
+}

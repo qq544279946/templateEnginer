@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>我是静态网页</h1>
+    <div id="container"></div>
+    <script src="/xuni/bundles.js"></script>
+    <script>
+        let data = {
+            items: ['苹果','香蕉','榴莲','雪梨']
+        }
+        let templateStr = `
+        <div class="hd">
+            我喜欢的水果
+        </div>
+        <div class="content">
+            {{#items}}
+                <p class="item">{{.}}</p>
+            {{/items}}
+        </div>
+        `
+        let domStr = TemplateEngine.render(templateStr, data);
+
+        let containerDom = document.getElementById('container');
+
+        containerDom.innerHTML = domStr;
+    </script>
+</body>
+</html>
